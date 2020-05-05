@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [EmployeesRestAPISuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.employeeapi.utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="EmployeeRestAPITest(failed)">
+    <classes>
+      <class name="com.employeeapi.testCases.TC_002_Get_Single_Employee_Record">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkStatusLine"/>
+          <include name="getEmployeeData"/>
+          <include name="setup"/>
+          <include name="checkStatusCode"/>
+          <include name="checkResponseBody"/>
+        </methods>
+      </class> <!-- com.employeeapi.testCases.TC_002_Get_Single_Employee_Record -->
+      <class name="com.employeeapi.testCases.TC_005_Delete_Employee_Record">
+        <methods>
+          <include name="checkResponseBody"/>
+          <include name="deleteEmployee"/>
+          <include name="tearDown"/>
+          <include name="checkContentEncoding"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.employeeapi.testCases.TC_005_Delete_Employee_Record -->
+      <class name="com.employeeapi.testCases.TC_003_Post_Employee_Record">
+        <methods>
+          <include name="checkContentEncoding"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="createEmployee"/>
+        </methods>
+      </class> <!-- com.employeeapi.testCases.TC_003_Post_Employee_Record -->
+      <class name="com.employeeapi.testCases.TC_004_Put_Employee_Record">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkResponseBody"/>
+          <include name="checkContentEncoding"/>
+          <include name="setup"/>
+          <include name="updateEmployee"/>
+        </methods>
+      </class> <!-- com.employeeapi.testCases.TC_004_Put_Employee_Record -->
+    </classes>
+  </test> <!-- EmployeeRestAPITest(failed) -->
+</suite> <!-- Failed suite [EmployeesRestAPISuite] -->
